@@ -1,0 +1,68 @@
+:root {
+  --base-hue: 200;
+  --base-saturation: 90%;
+  --base-lightness: 30%;
+
+  --standard-primary-color: hsl(
+    var(--base-hue),
+    var(--base-saturation),
+    var(--base-lightness)
+  );
+  --light-primary-color: hsl(var(--base-hue), var(--base-saturation), 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.password-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-area__password-input {
+  margin-bottom: 12vh;
+}
+
+.password-input {
+  cursor: default;
+  caret-color: transparent;
+  color: var(--standard-primary-color);
+  height: 2ch;
+  aspect-ratio: 3.5/1;
+  text-align: center;
+  padding-left: 2.5vw;
+  font-size: max(6vw, 4rem);
+  letter-spacing: 3vw;
+  border: none;
+  outline: 2px solid var(--standard-primary-color);
+  border-radius: 100px;
+  box-shadow: inset 0px 0px 0px 1vw var(--light-primary-color), 1vw 1.5vh;
+  opacity: 20%;
+}
+
+.password-input:focus {
+  opacity: 100%;
+  color: var(--standard-primary-color);
+  outline: 2px solid var(--standard-primary-color);
+  box-shadow: inset 0px 0px 0px 1vw var(--light-primary-color), 1vw 1.5vh;
+}
+
+p {
+  width: 40%;
+  height: 200px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--standard-primary-color);
+  margin: 0 auto;
+  margin-top: 55vh;
+  text-align: center;
+}
